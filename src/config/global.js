@@ -19,6 +19,10 @@ export const RESPONSE = {
     code: "204",
     message: " not found",
   },
+  MULTER_ERR: {
+    code: "285",
+    message: "",
+  },
 
   UNKNOWN_ERR: {
     code: "500",
