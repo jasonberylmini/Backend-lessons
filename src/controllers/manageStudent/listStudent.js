@@ -40,6 +40,13 @@ export default router.get("/", async (req, res) => {
       return send(res, setErrMsg(RESPONSE.NOT_FOUND, "student data"));
     }
 
+    studentData= studentData.map((itm) =>{
+      return{
+        ...itm,
+        image:itm.image != undefined ? "/uploads/" +itm.image: null,
+
+      };
+    });
     return send(res, RESPONSE.SUCESSS, studentData);
   } catch (error) {
     console.log("list student:",error);
